@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-24T03:42:14.338Z</updated>
+  <updated>2015-10-24T05:04:29.886Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,13 +18,10 @@
     <title><![CDATA[myArticle]]></title>
     <link href="http://yoursite.com/2015/10/24/myArticle/"/>
     <id>http://yoursite.com/2015/10/24/myArticle/</id>
-    <published>2015-10-24T03:42:14.338Z</published>
-    <updated>2015-10-24T03:42:14.338Z</updated>
+    <published>2015-10-24T05:04:29.886Z</published>
+    <updated>2015-10-24T05:04:29.886Z</updated>
     <content type="html"><![CDATA[<p></p><h2>my titles </h2><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p></p>
-<pre><code class="scala"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(</span>s : <span class="type">Int</span> =&gt; <span class="type">Int</span>,a :<span class="type">Int</span>) = {
-  s(a)
-}
-</code></pre>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(</span>s : <span class="type">Int</span> =&gt; <span class="type">Int</span>,a :<span class="type">Int</span>) = &#123;</span><br><span class="line">  s(a)</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">$$ ��ʾ���й�ʽ��</span><br><span class="line"></span><br><span class="line">$$\sum_&#123;i=<span class="number">1</span>&#125;^n a_i=<span class="number">0</span>$$</span><br><span class="line"></span><br><span class="line">$$f(x_1,x_x,\ldots,x_n) = x_1^<span class="number">2</span> + x_2^<span class="number">2</span> + \cdots + x_n^<span class="number">2</span> $$</span><br><span class="line"></span><br><span class="line">$$\sum^&#123;j-<span class="number">1</span>&#125;_&#123;k=<span class="number">0</span>&#125;&#123;\widehat&#123;\gamma&#125;_&#123;kj&#125; z_k&#125;$$</span><br><span class="line"></span><br><span class="line">``` java</span><br><span class="line">int i = <span class="number">0</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
     <![CDATA[<p></p><h2>my titles </h2><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><t]]>
