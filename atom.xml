@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-23T10:16:12.268Z</updated>
+  <updated>2015-10-24T03:33:47.426Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,14 +15,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[myArticle]]></title>
-    <link href="http://yoursite.com/2015/10/23/myArticle/"/>
-    <id>http://yoursite.com/2015/10/23/myArticle/</id>
-    <published>2015-10-23T10:16:12.000Z</published>
-    <updated>2015-10-23T10:16:12.268Z</updated>
-    <content type="html"></content>
+    <title></title>
+    <link href="http://yoursite.com/2015/10/24/myArticle/"/>
+    <id>http://yoursite.com/2015/10/24/myArticle/</id>
+    <published>2015-10-24T03:33:47.426Z</published>
+    <updated>2015-10-24T03:33:47.426Z</updated>
+    <content type="html"><![CDATA[<p>title: myArticle<br>date: 2015-10-23 18:16:12<br>tags:hadoop</p>
+<h3> this is a title</h3>
+
+<pre><code class="scala"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(</span>s : <span class="type">Int</span> =&gt; <span class="type">Int</span>,a :<span class="type">In</span>��) = {
+  s(a)
+}
+</code></pre>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<p>title: myArticle<br>date: 2015-10-23 18:16:12<br>tags:hadoop</p>
+<h3> this is a title</h3>
+
+<pre><code class="scala"><span class="functio]]>
     </summary>
     
   </entry>
