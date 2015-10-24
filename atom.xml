@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-24T03:38:42.221Z</updated>
+  <updated>2015-10-24T03:42:14.338Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,19 +15,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title><![CDATA[myArticle]]></title>
     <link href="http://yoursite.com/2015/10/24/myArticle/"/>
     <id>http://yoursite.com/2015/10/24/myArticle/</id>
-    <published>2015-10-24T03:38:42.221Z</published>
-    <updated>2015-10-24T03:38:42.221Z</updated>
-    <content type="html"><![CDATA[<p>title: myArticle<br>date: 2015-10-23 18:16:12<br>tags:hadoop<br> </p><h2>my titles </h2><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p></p>
+    <published>2015-10-24T03:42:14.338Z</published>
+    <updated>2015-10-24T03:42:14.338Z</updated>
+    <content type="html"><![CDATA[<p></p><h2>my titles </h2><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p></p>
 <pre><code class="scala"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(</span>s : <span class="type">Int</span> =&gt; <span class="type">Int</span>,a :<span class="type">Int</span>) = {
   s(a)
 }
 </code></pre>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>title: myArticle<br>date: 2015-10-23 18:16:12<br>tags:hadoop<br> </p><h2>my titles </h2><br><figure class="highlight bash"><table><tr><td]]>
+    <![CDATA[<p></p><h2>my titles </h2><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><t]]>
     </summary>
     
   </entry>
