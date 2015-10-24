@@ -14,7 +14,7 @@ def func(s : Int =&amp;gt; Int,a :Int) = {
   s(a)
 }
 
-$$ formula：$$\sum_{i=1}^n a_i=0$$$$f(x_1,x_x,\ldots,x_n) = x_1^2 ">
+$$\frac{\partial u}{\partial t}= h^2 \left( \frac{\partial^2 u}{\">
     
     
     
@@ -77,8 +77,8 @@ $$ formula：$$\sum_{i=1}^n a_i=0$$$$f(x_1,x_x,\ldots,x_n) = x_1^2 ">
       <a href="http://yoursite.com" title="Vincent Gu">Vincent Gu</a>
     </p>
   <p class="article-time">
-    <time datetime="2015-10-24T05:06:40.237Z" itemprop="datePublished">2015-10-24</time>
-    更新日期:<time datetime="2015-10-24T05:06:40.237Z" itemprop="dateModified">2015-10-24</time>
+    <time datetime="2015-10-24T05:21:24.708Z" itemprop="datePublished">2015-10-24</time>
+    更新日期:<time datetime="2015-10-24T05:21:24.708Z" itemprop="dateModified">2015-10-24</time>
     
   </p>
 </header>
@@ -95,7 +95,7 @@ $$ formula：$$\sum_{i=1}^n a_i=0$$$$f(x_1,x_x,\ldots,x_n) = x_1^2 ">
   s(a)
 }
 </code></pre>
-<p>$$ formula：<br>$$\sum_{i=1}^n a_i=0$$<br>$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x<em>n^2 $$<br>$$\sum^{j-1}</em>{k=0}{\widehat{\gamma}_{kj} z_k}$$</p>
+<p>$$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -301,5 +301,35 @@ $(document).ready(function(){
 
 
 
-  </body>
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
 </html>
