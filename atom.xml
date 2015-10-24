@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Hexo]]></title>
+  <title><![CDATA[Vincent Guc]]></title>
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-24T05:25:41.563Z</updated>
+  <updated>2015-10-24T12:07:57.276Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name><![CDATA[Vincent Gu]]></name>
+    <name><![CDATA[Vincent Guc]]></name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[flume的安装部署]]></title>
+    <link href="http://yoursite.com/2015/10/24/flume-about/"/>
+    <id>http://yoursite.com/2015/10/24/flume-about/</id>
+    <published>2015-10-24T12:03:44.000Z</published>
+    <updated>2015-10-24T12:07:57.276Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="flume" scheme="http://yoursite.com/tags/flume/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[myArticle]]></title>
