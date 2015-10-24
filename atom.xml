@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-24T03:35:08.326Z</updated>
+  <updated>2015-10-24T03:36:47.293Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
     <title></title>
     <link href="http://yoursite.com/2015/10/24/myArticle/"/>
     <id>http://yoursite.com/2015/10/24/myArticle/</id>
-    <published>2015-10-24T03:35:08.326Z</published>
-    <updated>2015-10-24T03:35:08.326Z</updated>
+    <published>2015-10-24T03:36:47.293Z</published>
+    <updated>2015-10-24T03:36:47.293Z</updated>
     <content type="html"><![CDATA[<p>title: myArticle<br>date: 2015-10-23 18:16:12<br>tags:hadoop</p>
-<p></p><h3> this is a title</h3><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <pre><code class="scala"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(</span>s : <span class="type">Int</span> =&gt; <span class="type">Int</span>,a :<span class="type">In</span>��) = {
   s(a)
 }
@@ -29,7 +29,7 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>title: myArticle<br>date: 2015-10-23 18:16:12<br>tags:hadoop</p>
-<p></p><h3> this is a title</h3><br><figure class="highlight bash"><tabl]]>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span ]]>
     </summary>
     
   </entry>
