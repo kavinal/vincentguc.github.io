@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-24T12:07:57.276Z</updated>
+  <updated>2015-10-24T12:20:15.142Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,14 +15,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://yoursite.com/2015/10/24/hello-world/"/>
+    <id>http://yoursite.com/2015/10/24/hello-world/</id>
+    <published>2015-10-24T12:20:15.142Z</published>
+    <updated>2015-10-24T12:20:15.142Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[flume的安装部署]]></title>
     <link href="http://yoursite.com/2015/10/24/flume-about/"/>
     <id>http://yoursite.com/2015/10/24/flume-about/</id>
     <published>2015-10-24T12:03:44.000Z</published>
-    <updated>2015-10-24T12:07:57.276Z</updated>
-    <content type="html"></content>
+    <updated>2015-10-24T12:51:01.421Z</updated>
+    <content type="html"><![CDATA[<h2 id="准备">准备</h2><ol>
+<li>flume1.6的安装包 <a href="http://www.apache.org/dyn/closer.lua/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz" target="_blank" rel="external">下载</a></li>
+<li>解压<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin.tar.gz -C ~/Devtool/flume</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="配置">配置</h2><ol>
+<li><p>进入解压后flume的目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/Devtool/flume</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在conf目录下建立以<strong>.conf</strong>结尾的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch conf/examples.conf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑<em>examples.conf</em>文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi conf/examples.conf</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>添加如下内容：</p>
+<blockquote>
+<p>#配置source的名字<br>HdfsAgent.sources = s1<br>#配置sink的名字<br>HdfsAgent.sinks = k1<br>#配置channel的名字<br>HdfsAgent.channels = c1<br>#配置与source相关的属性<br>#配置source类型为监听目录<br>HdfsAgent.sources.s1.type = spooldir<br>#配置监听的目录<br>HdfsAgent.sources.s1.spoolDir = /home/test<br>HdfsAgent.sources.s1.fileHeader = true<br>HdfsAgent.sources.s1.deletePolicy = immediate<br>HdfsAgent.sources.s1.fileHeader = true<br>#配置sink的相关属性(将数据写入到hdfs)<br>HdfsAgent.sinks.k1.type = hdfs<br>#hdfs的地址<br>HdfsAgent.sinks.k1.hdfs.path = hdfs://124.16.136.144:8020/user/hive/warehouse/user4/%Y%m%d/%H<br>#写入到hdfs上的文件的前缀<br>HdfsAgent.sinks.k1.hdfs.filePrefix = %{file}<br>HdfsAgent.sinks.k1.hdfs.fileType = DataStream<br>HdfsAgent.sinks.k1.hdfs.rollInterval = 10<br>HdfsAgent.sinks.k1.hdfs.rollCount = 0<br>HdfsAgent.sinks.k1.hdfs.rollSize = 0<br>#HdfsAgent.sinks.k1.hdfs.maxOpenFiles = 1<br>HdfsAgent.sinks.k1.hdfs.writeFormat = Text<br>HdfsAgent.sinks.k1.hdfs.batchSize = 10<br>HdfsAgent.sinks.k1.hdfs.inUsePrefix = .<br>#配置channel的相关属性<br>HdfsAgent.channels.c1.type = memory<br>HdfsAgent.channels.c1.capacity = 500000<br>HdfsAgent.channels.c1.transactionCapacity = 100000<br>HdfsAgent.channels.c1.byteCapacity = 1000000000<br>#配置source的channel<br>HdfsAgent.sources.s1.channels = c1<br>#配置sink的channel<br>HdfsAgent.sinks.k1.channel = c1</p>
+</blockquote>
+<p><a href="http://flume.apache.org/FlumeUserGuide.html" target="_blank" rel="external">更多配置信息</a></p>
+<h2 id="启动">启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bin/flume-ng agent -n HdfsAgent -c conf <span class="operator">-f</span> conf/examples.conf -Dflume.root.logger=INFO,console</span><br></pre></td></tr></table></figure>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<h2 id="准备">准备</h2><ol>
+<li>flume1.6的安装包 <a href="http://www.apache.org/dyn/closer.lua/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz" target="_b]]>
     </summary>
     
       <category term="flume" scheme="http://yoursite.com/tags/flume/"/>
@@ -48,28 +93,6 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p></p><h2>my titles </h2><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><t]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://yoursite.com/2015/10/23/hello-world/"/>
-    <id>http://yoursite.com/2015/10/23/hello-world/</id>
-    <published>2015-10-23T08:43:55.745Z</published>
-    <updated>2015-10-23T08:43:55.745Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
     </summary>
     
   </entry>

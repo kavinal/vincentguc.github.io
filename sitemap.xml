@@ -3,17 +3,17 @@
   
   <url>
     <loc>http://yoursite.com/2015/10/24/flume-about/</loc>
-    <lastmod>2015-10-24T12:07:57.276Z</lastmod>
+    <lastmod>2015-10-24T12:51:01.421Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/10/24/hello-world/</loc>
+    <lastmod>2015-10-24T12:20:15.142Z</lastmod>
   </url>
   
   <url>
     <loc>http://yoursite.com/2015/10/24/myArticle/</loc>
     <lastmod>2015-10-24T05:25:41.563Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2015/10/23/hello-world/</loc>
-    <lastmod>2015-10-23T08:43:55.745Z</lastmod>
   </url>
   
 </urlset>
