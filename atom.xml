@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-24T05:23:19.071Z</updated>
+  <updated>2015-10-24T05:25:41.563Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,15 +18,18 @@
     <title><![CDATA[myArticle]]></title>
     <link href="http://yoursite.com/2015/10/24/myArticle/"/>
     <id>http://yoursite.com/2015/10/24/myArticle/</id>
-    <published>2015-10-24T05:23:19.071Z</published>
-    <updated>2015-10-24T05:23:19.071Z</updated>
+    <published>2015-10-24T05:25:41.563Z</published>
+    <updated>2015-10-24T05:25:41.563Z</updated>
     <content type="html"><![CDATA[<p></p><h2>my titles </h2><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p></p>
 <pre><code class="scala"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(</span>s : <span class="type">Int</span> =&gt; <span class="type">Int</span>,a :<span class="type">Int</span>) = {
   s(a)
 }
 </code></pre>
 <p>$$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$</p>
-<p>$$ 表示整行公式：<br>$$\sum_{i=1}^n a_i=0$$<br>$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x<em>n^2 $$<br>$$\sum^{j-1}</em>{k=0}{\widehat{\gamma}_{kj} z_k}$$</p>
+<p>$$ 表示整行公式：</p>
+<p>$$\sum_{i=1}^n a_i=0$$</p>
+<p>$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$</p>
+<p>$$\sum^{j-1}<em>{k=0}{\widehat{\gamma}</em>{kj} z_k}$$</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p></p><h2>my titles </h2><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><t]]>
