@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2015/10/26/machine-learning/</loc>
+    <lastmod>2015-10-26T01:41:34.437Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2015/10/24/flume-about/</loc>
     <lastmod>2015-10-24T12:51:01.421Z</lastmod>
   </url>
