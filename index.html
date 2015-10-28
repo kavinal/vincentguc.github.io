@@ -64,12 +64,17 @@
 
   <section class="post" itemscope itemprop="blogPost">
   
-    <a href="/2015/10/26/machine-learning/" title="machine-learning" itemprop="url">
+    <a href="/2015/10/26/machine-learning/" title="k- 近邻算法" itemprop="url">
   
-    <h1 itemprop="name">machine-learning</h1>
+    <h1 itemprop="name">k- 近邻算法</h1>
     
      
-           <p itemprop="description" >first try   movement good day for you do not be free</p>
+           <p itemprop="description" >基本概念：采用不同特征值之间的距离来进行分类优点： 精度高，对异常值不敏感，无数据输入假定缺点： 计算复杂度高，空间复杂度高
+算法的一般流程
+计算已知类别中数据中的点与当前点之间的距离
+例：
+
+如果数据存在两个特征值，假设当前点为($ x,y$),已知数据集中的一个数据为($ a</p>
         
     
     <time datetime="2015-10-26T01:32:20.000Z" itemprop="datePublished">2015-10-26</time>
@@ -226,5 +231,35 @@ $(document).ready(function(){
 
 
 
-  </body>
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
  </html>
