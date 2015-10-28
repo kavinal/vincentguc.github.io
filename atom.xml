@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-28T02:56:13.403Z</updated>
+  <updated>2015-10-28T10:59:01.775Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://yoursite.com/2015/10/26/machine-learning/"/>
     <id>http://yoursite.com/2015/10/26/machine-learning/</id>
     <published>2015-10-26T01:32:20.000Z</published>
-    <updated>2015-10-28T02:56:13.403Z</updated>
-    <content type="html"><![CDATA[<p>基本概念：采用不同特征值之间的距离来进行分类<br><strong>优点：</strong> 精度高，对异常值不敏感，无数据输入假定<br><strong>缺点：</strong> 计算复杂度高，空间复杂度高</p>
+    <updated>2015-10-28T10:59:01.775Z</updated>
+    <content type="html"><![CDATA[<p>基本概念：采用不同特征值之间的距离来进行分类<br><strong>优点：</strong> 精度高，对异常值不敏感，无数据输入假定<br><strong>缺点：</strong> 计算复杂度高，空间复杂度高<br><a id="more"></a></p>
 <h1 id="算法的一般流程">算法的一般流程</h1><ol>
 <li>计算已知类别中数据中的点与当前点之间的距离<blockquote>
 <p>例：</p>
@@ -40,8 +40,8 @@
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>基本概念：采用不同特征值之间的距离来进行分类<br><strong>优点：</strong> 精度高，对异常值不敏感，无数据输入假定<br><strong>缺点：</strong> 计算复杂度高，空间复杂度高</p>
-<h1 id="算法的一般流程">算法的一般流程</h1]]>
+    <![CDATA[<p>基本概念：采用不同特征值之间的距离来进行分类<br><strong>优点：</strong> 精度高，对异常值不敏感，无数据输入假定<br><strong>缺点：</strong> 计算复杂度高，空间复杂度高<br>]]>
+    
     </summary>
     
       <category term="learning" scheme="http://yoursite.com/categories/learning/"/>
@@ -75,16 +75,18 @@
     <link href="http://yoursite.com/2015/10/24/flume-about/"/>
     <id>http://yoursite.com/2015/10/24/flume-about/</id>
     <published>2015-10-24T12:03:44.000Z</published>
-    <updated>2015-10-24T12:51:01.421Z</updated>
+    <updated>2015-10-28T10:58:48.105Z</updated>
     <content type="html"><![CDATA[<h2 id="准备">准备</h2><ol>
 <li>flume1.6的安装包 <a href="http://www.apache.org/dyn/closer.lua/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz" target="_blank" rel="external">下载</a></li>
 <li>解压<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin.tar.gz -C ~/Devtool/flume</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="配置">配置</h2><ol>
-<li><p>进入解压后flume的目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/Devtool/flume</span><br></pre></td></tr></table></figure>
+<li>进入解压后flume的目录<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/Devtool/flume</span><br></pre></td></tr></table></figure>
 </li>
+</ol>
+<a id="more"></a>
+<ol>
 <li><p>在conf目录下建立以<strong>.conf</strong>结尾的文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch conf/examples.conf</span><br></pre></td></tr></table></figure>
 </li>
@@ -101,7 +103,15 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="准备">准备</h2><ol>
-<li>flume1.6的安装包 <a href="http://www.apache.org/dyn/closer.lua/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz" target="_b]]>
+<li>flume1.6的安装包 <a href="http://www.apache.org/dyn/closer.lua/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz">下载</a></li>
+<li>解压<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin.tar.gz -C ~/Devtool/flume</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="配置">配置</h2><ol>
+<li>进入解压后flume的目录<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/Devtool/flume</span><br></pre></td></tr></table></figure>
+</li>
+</ol>]]>
+    
     </summary>
     
       <category term="flume" scheme="http://yoursite.com/tags/flume/"/>
