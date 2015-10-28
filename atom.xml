@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-28T10:59:01.775Z</updated>
+  <updated>2015-10-28T11:44:01.135Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/10/26/machine-learning/"/>
     <id>http://yoursite.com/2015/10/26/machine-learning/</id>
     <published>2015-10-26T01:32:20.000Z</published>
-    <updated>2015-10-28T10:59:01.775Z</updated>
+    <updated>2015-10-28T11:44:01.135Z</updated>
     <content type="html"><![CDATA[<p>基本概念：采用不同特征值之间的距离来进行分类<br><strong>优点：</strong> 精度高，对异常值不敏感，无数据输入假定<br><strong>缺点：</strong> 计算复杂度高，空间复杂度高<br><a id="more"></a></p>
 <h1 id="算法的一般流程">算法的一般流程</h1><ol>
 <li>计算已知类别中数据中的点与当前点之间的距离<blockquote>
@@ -44,7 +44,7 @@
     
     </summary>
     
-      <category term="learning" scheme="http://yoursite.com/categories/learning/"/>
+      <category term="machineLearning" scheme="http://yoursite.com/tags/machineLearning/"/>
     
   </entry>
   
