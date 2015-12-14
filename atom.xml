@@ -39,7 +39,7 @@
     <link href="http://yoursite.com/2015/12/14/ListAbout/"/>
     <id>http://yoursite.com/2015/12/14/ListAbout/</id>
     <published>2015-12-14T05:52:22.000Z</published>
-    <updated>2015-12-14T05:55:18.204Z</updated>
+    <updated>2015-12-14T07:43:47.556Z</updated>
     <content type="html"><![CDATA[<p>主要结合源码来介绍一些常用集合的的实现<br><a id="more"></a></p>
 <h1 id="ArrayList(基于单线程的)">ArrayList(基于单线程的)</h1><p>ArrayList的实现方式是基于数组的，因此它的<strong>插入，删除</strong>操作比较耗时，但它在<strong>随机访问</strong>方面的速度不及快。源码中定义了一个Object数组用来存储添加进来的元素,Object数据是用transient来修饰的，表明它不能被用来持久化，只存在于内存中。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">transient</span> Object[] elementData;</span><br></pre></td></tr></table></figure></p>
 <p>ArrayList 中比较常用的方法有add,remove等等，在这里主要分析这两个方法。</p>
@@ -64,7 +64,7 @@
     <link href="http://yoursite.com/2015/12/11/InnerClass/"/>
     <id>http://yoursite.com/2015/12/11/InnerClass/</id>
     <published>2015-12-11T08:01:33.000Z</published>
-    <updated>2015-12-14T07:16:29.521Z</updated>
+    <updated>2015-12-14T07:43:52.765Z</updated>
     <content type="html"><![CDATA[<p>Nested Classes 主要分为两类，一类是Static Nested Classes,一类是Inner Classes<br><a id="more"></a></p>
 <p>#Static Nested Classes<br>Static Nested Classes 与它的<strong>外部类</strong>相关联，在Static Nested Classes中无法访问它的外部类的非静态成员变量以及方法，它只能访问到静态成员变量和方法。</p>
 <p>####例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> age = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">public</span> String name = <span class="string">"vincent"</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123; <span class="comment">//class可加访问修饰符，默认是包访问权限</span></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="title">B</span><span class="params">()</span></span>&#123;</span><br><span class="line">        name = <span class="string">"good"</span>; <span class="comment">//编译报错，无法访问非静态变量</span></span><br><span class="line">        age = <span class="number">2</span>; <span class="comment">//正常，无错误</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
