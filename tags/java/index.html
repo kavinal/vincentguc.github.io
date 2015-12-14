@@ -3,36 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>flume的安装部署 | Vincent Guc</title>
+  <title>Tag: Java | Vincent Guc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="准备
-flume1.6的安装包 下载
-解压1$ tar -zxvf apache-flume-1.6.0-bin.tar.gz -C ~/Devtool/flume
-
-
-配置
-进入解压后flume的目录1$ cd ~/Devtool/flume">
-<meta property="og:type" content="article">
-<meta property="og:title" content="flume的安装部署">
-<meta property="og:url" content="http://yoursite.com/2015/10/24/flume-about/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vincent Guc">
+<meta property="og:url" content="http://yoursite.com/tags/Java/index.html">
 <meta property="og:site_name" content="Vincent Guc">
-<meta property="og:description" content="准备
-flume1.6的安装包 下载
-解压1$ tar -zxvf apache-flume-1.6.0-bin.tar.gz -C ~/Devtool/flume
-
-
-配置
-进入解压后flume的目录1$ cd ~/Devtool/flume">
-<meta property="og:updated_time" content="2015-10-28T10:58:48.105Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flume的安装部署">
-<meta name="twitter:description" content="准备
-flume1.6的安装包 下载
-解压1$ tar -zxvf apache-flume-1.6.0-bin.tar.gz -C ~/Devtool/flume
-
-
-配置
-进入解压后flume的目录1$ cd ~/Devtool/flume">
+<meta name="twitter:title" content="Vincent Guc">
+<meta name="twitter:description">
   
     <link rel="alternative" href="/atom.xml" title="Vincent Guc" type="application/atom+xml">
   
@@ -217,130 +198,53 @@ flume1.6的安装包 下载
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-flume-about" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2015/10/24/flume-about/" class="article-date">
-  	<time datetime="2015-10-24T12:03:44.000Z" itemprop="datePublished">2015-10-24</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2015" class="archive-year">2015</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2015/12/14/ListAbout/" class="archive-article-date">
+  	<time datetime="2015-12-14T05:52:22.000Z" itemprop="datePublished">Dec 14</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      flume的安装部署
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/12/14/ListAbout/">ListAbout</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flume/">flume</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
 	</div>
 
-        
+          
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="准备">准备</h2><ol>
-<li>flume1.6的安装包 <a href="http://www.apache.org/dyn/closer.lua/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz" target="_blank" rel="external">下载</a></li>
-<li>解压<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin.tar.gz -C ~/Devtool/flume</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="配置">配置</h2><ol>
-<li>进入解压后flume的目录<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/Devtool/flume</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<a id="more"></a>
-<ol>
-<li><p>在conf目录下建立以<strong>.conf</strong>结尾的文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch conf/examples.conf</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编辑<em>examples.conf</em>文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi conf/examples.conf</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>添加如下内容：</p>
-<blockquote>
-<p>#配置source的名字<br>HdfsAgent.sources = s1<br>#配置sink的名字<br>HdfsAgent.sinks = k1<br>#配置channel的名字<br>HdfsAgent.channels = c1<br>#配置与source相关的属性<br>#配置source类型为监听目录<br>HdfsAgent.sources.s1.type = spooldir<br>#配置监听的目录<br>HdfsAgent.sources.s1.spoolDir = /home/test<br>HdfsAgent.sources.s1.fileHeader = true<br>HdfsAgent.sources.s1.deletePolicy = immediate<br>HdfsAgent.sources.s1.fileHeader = true<br>#配置sink的相关属性(将数据写入到hdfs)<br>HdfsAgent.sinks.k1.type = hdfs<br>#hdfs的地址<br>HdfsAgent.sinks.k1.hdfs.path = hdfs://124.16.136.144:8020/user/hive/warehouse/user4/%Y%m%d/%H<br>#写入到hdfs上的文件的前缀<br>HdfsAgent.sinks.k1.hdfs.filePrefix = %{file}<br>HdfsAgent.sinks.k1.hdfs.fileType = DataStream<br>HdfsAgent.sinks.k1.hdfs.rollInterval = 10<br>HdfsAgent.sinks.k1.hdfs.rollCount = 0<br>HdfsAgent.sinks.k1.hdfs.rollSize = 0<br>#HdfsAgent.sinks.k1.hdfs.maxOpenFiles = 1<br>HdfsAgent.sinks.k1.hdfs.writeFormat = Text<br>HdfsAgent.sinks.k1.hdfs.batchSize = 10<br>HdfsAgent.sinks.k1.hdfs.inUsePrefix = .<br>#配置channel的相关属性<br>HdfsAgent.channels.c1.type = memory<br>HdfsAgent.channels.c1.capacity = 500000<br>HdfsAgent.channels.c1.transactionCapacity = 100000<br>HdfsAgent.channels.c1.byteCapacity = 1000000000<br>#配置source的channel<br>HdfsAgent.sources.s1.channels = c1<br>#配置sink的channel<br>HdfsAgent.sinks.k1.channel = c1</p>
-</blockquote>
-<p><a href="http://flume.apache.org/FlumeUserGuide.html" target="_blank" rel="external">更多配置信息</a></p>
-<h2 id="启动">启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bin/flume-ng agent -n HdfsAgent -c conf <span class="operator">-f</span> conf/examples.conf -Dflume.root.logger=INFO,console</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2015/10/26/machine-learning/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          k- 近邻算法
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-<div class="share">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到：</span>
-		<a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="flume-about" data-title="flume的安装部署" data-url="http://yoursite.com/2015/10/24/flume-about/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
+    
 
 </div>
       <footer id="footer">
@@ -366,9 +270,9 @@ flume1.6的安装包 下载
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false
 	}
