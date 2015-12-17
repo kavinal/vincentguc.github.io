@@ -44,7 +44,7 @@
     <link href="http://yoursite.com/2015/12/14/SetAbout/"/>
     <id>http://yoursite.com/2015/12/14/SetAbout/</id>
     <published>2015-12-14T06:50:25.000Z</published>
-    <updated>2015-12-14T09:22:44.798Z</updated>
+    <updated>2015-12-17T07:16:50.414Z</updated>
     <content type="html"><![CDATA[<p>主要结合源码来分析与set集合的相关实现<br><a id="more"></a><br>Set集合中不能存储重复的元素，相同的元素只存储一次。</p>
 <h1 id="HashSet">HashSet</h1><p>HashSet 内部的实现是基于HashMap(<strong>LinkedHashSet的实现基于LinkedHashMap，其它地方均与HashSet相同，LinkedHashSet继承自HashSet</strong>)的，也就是说HashSet中的数据是存放在HashMap中的<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个瞬时的HashMap</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">transient</span> HashMap&lt;E,Object&gt; map;</span><br></pre></td></tr></table></figure></p>
 <h3 id="add_方法">add 方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//往map中存放数据，key值为要添加的元素，PRESENT为一个Object对象</span></span><br><span class="line"><span class="comment">//官方定义： private static final Object PRESENT = new Object();</span></span><br><span class="line"><span class="comment">//由于添加进的元素是无序的，所以添加元素只有一种方法，即根据元素来添加，不能指定位置。</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> map.put(e, PRESENT)==<span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -55,7 +55,7 @@
     
     </summary>
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+      <category term="Java相关" scheme="http://yoursite.com/tags/Java%E7%9B%B8%E5%85%B3/"/>
     
   </entry>
   
