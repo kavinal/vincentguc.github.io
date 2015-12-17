@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>SetAbout | Vincent Guc</title>
+  <title>Palindrome Number | Vincent Guc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="主要结合源码来分析与set集合的相关实现">
+  <meta name="description" content="description：Determine whether an integer is a palindrome. Do this without extra space">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SetAbout">
-<meta property="og:url" content="http://yoursite.com/2015/12/14/SetAbout/index.html">
+<meta property="og:title" content="Palindrome Number">
+<meta property="og:url" content="http://yoursite.com/2015/12/17/Palindrome-Number/index.html">
 <meta property="og:site_name" content="Vincent Guc">
-<meta property="og:description" content="主要结合源码来分析与set集合的相关实现">
-<meta property="og:updated_time" content="2015-12-14T09:22:44.798Z">
+<meta property="og:description" content="description：Determine whether an integer is a palindrome. Do this without extra space">
+<meta property="og:updated_time" content="2015-12-17T07:00:22.631Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SetAbout">
-<meta name="twitter:description" content="主要结合源码来分析与set集合的相关实现">
+<meta name="twitter:title" content="Palindrome Number">
+<meta name="twitter:description" content="description：Determine whether an integer is a palindrome. Do this without extra space">
   
     <link rel="alternative" href="/atom.xml" title="Vincent Guc" type="application/atom+xml">
   
@@ -174,11 +174,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-SetAbout" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Palindrome-Number" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/14/SetAbout/" class="article-date">
-  	<time datetime="2015-12-14T06:50:25.000Z" itemprop="datePublished">2015-12-14</time>
+      <a href="/2015/12/17/Palindrome-Number/" class="article-date">
+  	<time datetime="2015-12-17T06:00:51.000Z" itemprop="datePublished">2015-12-17</time>
 </a>
     </div>
   
@@ -191,7 +191,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      SetAbout
+      Palindrome Number
     </h1>
   
 
@@ -200,7 +200,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
 	</div>
 
         
@@ -211,10 +211,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>主要结合源码来分析与set集合的相关实现<br><a id="more"></a><br>Set集合中不能存储重复的元素，相同的元素只存储一次。</p>
-<h1 id="HashSet">HashSet</h1><p>HashSet 内部的实现是基于HashMap(<strong>LinkedHashSet的实现基于LinkedHashMap，其它地方均与HashSet相同，LinkedHashSet继承自HashSet</strong>)的，也就是说HashSet中的数据是存放在HashMap中的<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个瞬时的HashMap</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">transient</span> HashMap&lt;E,Object&gt; map;</span><br></pre></td></tr></table></figure></p>
-<h3 id="add_方法">add 方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//往map中存放数据，key值为要添加的元素，PRESENT为一个Object对象</span></span><br><span class="line"><span class="comment">//官方定义： private static final Object PRESENT = new Object();</span></span><br><span class="line"><span class="comment">//由于添加进的元素是无序的，所以添加元素只有一种方法，即根据元素来添加，不能指定位置。</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> map.put(e, PRESENT)==<span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="remove_方法">remove 方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除指定元素</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> map.remove(o)==PRESENT;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+        <p>description：Determine whether an integer is a palindrome. Do this without extra space<br><a id="more"></a><br>Palindrome Number 就是一个整数正序和逆序所表示的数是一样的。<br>题目的大概意思就是用一个算法来识别给定的任意整数是不是Palindrome Number</p>
+<p>#解题思路：</p>
+<ol>
+<li><p>看到这题的时候，首先想到的是将数字转换成字符串，然后将字符串reverse，然后再比较两个字符串是否相等。但是题目中说明了不能使用额外空间，所以这种思路不可行（但是LeetCode貌似并没有对空间地址进行检查，用这种思路实现提交通过了，下面是具体的实现代码）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x &lt; <span class="number">0</span>)</span><br><span class="line">        	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(x == <span class="number">0</span>)</span><br><span class="line">        	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">        	String old = x+<span class="string">""</span>;</span><br><span class="line">        	String res = <span class="string">""</span>;</span><br><span class="line">               <span class="comment">//将数字逆序存储为字符串</span></span><br><span class="line">        	<span class="keyword">for</span>(<span class="keyword">int</span> i = old.length() - <span class="number">1</span> ;i &gt;= <span class="number">0</span>;i--)&#123;</span><br><span class="line">        		res += old.charAt(i);</span><br><span class="line">        	&#125;</span><br><span class="line">               <span class="comment">//比较正序和逆序字符串是否相等</span></span><br><span class="line">        	<span class="keyword">if</span>(old.equals(res))</span><br><span class="line">        		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        	<span class="keyword">else</span></span><br><span class="line">        	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果一个整数是Palindrome Number，那么就意味着它是对称的，所以我们可以来比较第一位和最后一位数字，然后比较第二位和倒数第二位，依次类推。以下是具体的代码实现（这种方法的实现要比第一种快一倍多）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	<span class="keyword">if</span> (x &lt; <span class="number">10</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	<span class="keyword">int</span> d = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> digit = x;</span><br><span class="line">       <span class="comment">//计算出整数有多少位</span></span><br><span class="line">		<span class="keyword">while</span>(digit &gt; <span class="number">0</span>)&#123;</span><br><span class="line">		d++;</span><br><span class="line">		digit = digit / <span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="keyword">int</span> left = (<span class="keyword">int</span>) Math.pow(<span class="number">10</span>, d - <span class="number">1</span> );</span><br><span class="line">		<span class="keyword">int</span> right = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(left &gt;= right)&#123;</span><br><span class="line">            <span class="comment">//比较左边和右边的数字</span></span><br><span class="line"> 			<span class="keyword">if</span>( x / left % <span class="number">10</span> != x / right % <span class="number">10</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line"> 			left /= <span class="number">10</span>;</span><br><span class="line"> 			right *= <span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
@@ -224,18 +230,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/17/Palindrome-Number/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Palindrome Number
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/14/ListAbout/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ListAbout</div>
+    <a href="/2015/12/14/SetAbout/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SetAbout</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -264,7 +261,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="SetAbout" data-title="SetAbout" data-url="http://yoursite.com/2015/12/14/SetAbout/"></div>
+	<div class="ds-thread" data-thread-key="Palindrome-Number" data-title="Palindrome Number" data-url="http://yoursite.com/2015/12/17/Palindrome-Number/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
