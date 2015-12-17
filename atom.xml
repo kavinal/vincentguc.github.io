@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-17T07:02:01.059Z</updated>
+  <updated>2015-12-17T07:24:47.837Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/17/Palindrome-Number/"/>
     <id>http://yoursite.com/2015/12/17/Palindrome-Number/</id>
     <published>2015-12-17T06:00:51.000Z</published>
-    <updated>2015-12-17T07:02:01.059Z</updated>
+    <updated>2015-12-17T07:24:47.837Z</updated>
     <content type="html"><![CDATA[<p>description：Determine whether an integer is a palindrome. Do this without extra space<br><a id="more"></a><br>Palindrome Number 就是一个整数正序和逆序所表示的数是一样的。<br>题目的大概意思就是用一个算法来识别给定的任意整数是不是Palindrome Number</p>
 <h1 id="解题思路：">解题思路：</h1><ol>
 <li><p>看到这题的时候，首先想到的是将数字转换成字符串，然后将字符串reverse，然后再比较两个字符串是否相等。但是题目中说明了不能使用额外空间，所以这种思路不可行（但是LeetCode貌似并没有对空间地址进行检查，用这种思路实现提交通过了，下面是具体的实现代码）</p>
@@ -35,7 +35,7 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
     
   </entry>
   
