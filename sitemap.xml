@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2015/12/17/Remove-Nth-Node-From-End-of-List/</loc>
+    <lastmod>2015-12-17T09:58:34.120Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/12/17/Longest-Common-Prefix/</loc>
+    <lastmod>2015-12-17T07:39:37.868Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2015/12/17/Palindrome-Number/</loc>
     <lastmod>2015-12-17T07:24:47.837Z</lastmod>
   </url>

@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-17T07:24:47.837Z</updated>
+  <updated>2015-12-17T09:58:34.120Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Remove Nth Node From End of List]]></title>
+    <link href="http://yoursite.com/2015/12/17/Remove-Nth-Node-From-End-of-List/"/>
+    <id>http://yoursite.com/2015/12/17/Remove-Nth-Node-From-End-of-List/</id>
+    <published>2015-12-17T07:40:59.000Z</published>
+    <updated>2015-12-17T09:58:34.120Z</updated>
+    <content type="html"><![CDATA[<h2 id="Description:">Description:</h2><p>Given a linked list, remove the nth node from the end of list and return its head.<br>For example<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given linked list: <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span>-&gt;<span class="number">5</span>, and n = <span class="number">2</span>.</span><br><span class="line"></span><br><span class="line">After removing the second node from the end, the linked list becomes <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">5</span>.</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>题目大意就是删除给定链表中的倒数第N个节点</p>
+<h1 id="解题思路">解题思路</h1><p>由于是单向链表，所以难点在于确定倒数第N个节点的准确位置，这里我们可以用两个指针来解决此问题（两个指针的间隔距离为N，然后将两个指针同时移动，直到一个指针到达链表末尾，此时另一个指针的位置就是倒数第N个节点的位置）<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">removeNthFromEnd</span><span class="params">(ListNode head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">     	<span class="keyword">if</span> (head == <span class="keyword">null</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="comment">//设置两个指针，用以确定待删除节点的位置</span></span><br><span class="line">	ListNode p = head;</span><br><span class="line">	ListNode q = head;</span><br><span class="line">       <span class="comment">//移动其中的一个节点，使两个节点的间距为N</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		p = p.next;</span><br><span class="line">       <span class="comment">//如果移动距离为N后，此节点为null，说明要删除的节点为首节点</span></span><br><span class="line">	<span class="keyword">if</span>(p == <span class="keyword">null</span>)&#123;</span><br><span class="line">		head = head.next;</span><br><span class="line">		<span class="keyword">return</span> head;</span><br><span class="line">	&#125;</span><br><span class="line">       <span class="comment">//处理待删除节点不是首节点的情况</span></span><br><span class="line">	<span class="keyword">while</span> (p.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">			q = q.next;</span><br><span class="line">		p = p.next;</span><br><span class="line">	&#125;</span><br><span class="line">			q.next = q.next.next;</span><br><span class="line">	<span class="keyword">return</span> head;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Description:">Description:</h2><p>Given a linked list, remove the nth node from the end of list and return its head.<br>For example<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given linked list: <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">4</span>-&gt;<span class="number">5</span>, and n = <span class="number">2</span>.</span><br><span class="line"></span><br><span class="line">After removing the second node from the end, the linked list becomes <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">3</span>-&gt;<span class="number">5</span>.</span><br></pre></td></tr></table></figure></p>]]>
+    
+    </summary>
+    
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Longest Common Prefix]]></title>
+    <link href="http://yoursite.com/2015/12/17/Longest-Common-Prefix/"/>
+    <id>http://yoursite.com/2015/12/17/Longest-Common-Prefix/</id>
+    <published>2015-12-17T07:27:05.000Z</published>
+    <updated>2015-12-17T07:39:37.868Z</updated>
+    <content type="html"><![CDATA[<p>Description:Write a function to find the longest common prefix string amongst an array of strings.<br><a id="more"></a><br>此题的要求是要找出字符串的最长公共子前缀。</p>
+<h1 id="解题思路">解题思路</h1><p>这道题的一种解法是：随便选取一个字符串，如果存在最长公共子前缀，一定在此字符串里，然后将此字符串和其余字符串作比较来获得最长公共子前缀。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</span><br><span class="line">      		<span class="keyword">if</span> (strs.length == <span class="number">0</span>)</span><br><span class="line">		  <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">             <span class="comment">//选取一个字符串用以和其它字符串作比较</span></span><br><span class="line">			String prefix = strs[<span class="number">0</span>];</span><br><span class="line">		String res = <span class="string">""</span>;</span><br><span class="line">           <span class="comment">//遍历剩余的字符串，对每一个字符串与选定的作比较</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; strs.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(prefix.length() == <span class="number">0</span> || strs[i].length() == <span class="number">0</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">            <span class="comment">//获得两个带比较字符串的最短长度</span></span><br><span class="line">		<span class="keyword">int</span> len = prefix.length() &gt; strs[i].length() ? strs[i].length() : prefix.length();</span><br><span class="line">		<span class="keyword">int</span> j;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; len; j++) &#123;</span><br><span class="line">			<span class="comment">//记录像个字符串具有最长公共子前缀的下标</span></span><br><span class="line">			<span class="keyword">if</span> (prefix.charAt(j) != strs[i].charAt(j)) &#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;</span><br><span class="line">           <span class="comment">//获得最长公共子前缀</span></span><br><span class="line">		prefix = prefix.substring(<span class="number">0</span>,j);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> prefix;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Description:Write a function to find the longest common prefix string amongst an array of strings.<br>]]>
+    
+    </summary>
+    
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Palindrome Number]]></title>

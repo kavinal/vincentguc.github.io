@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Palindrome Number | Vincent Guc</title>
+  <title>Longest Common Prefix | Vincent Guc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="description：Determine whether an integer is a palindrome. Do this without extra space">
+  <meta name="description" content="Description:Write a function to find the longest common prefix string amongst an array of strings.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Palindrome Number">
-<meta property="og:url" content="http://yoursite.com/2015/12/17/Palindrome-Number/index.html">
+<meta property="og:title" content="Longest Common Prefix">
+<meta property="og:url" content="http://yoursite.com/2015/12/17/Longest-Common-Prefix/index.html">
 <meta property="og:site_name" content="Vincent Guc">
-<meta property="og:description" content="description：Determine whether an integer is a palindrome. Do this without extra space">
-<meta property="og:updated_time" content="2015-12-17T07:24:47.837Z">
+<meta property="og:description" content="Description:Write a function to find the longest common prefix string amongst an array of strings.">
+<meta property="og:updated_time" content="2015-12-17T07:39:37.868Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Palindrome Number">
-<meta name="twitter:description" content="description：Determine whether an integer is a palindrome. Do this without extra space">
+<meta name="twitter:title" content="Longest Common Prefix">
+<meta name="twitter:description" content="Description:Write a function to find the longest common prefix string amongst an array of strings.">
   
     <link rel="alternative" href="/atom.xml" title="Vincent Guc" type="application/atom+xml">
   
@@ -174,11 +174,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-Palindrome-Number" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Longest-Common-Prefix" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/17/Palindrome-Number/" class="article-date">
-  	<time datetime="2015-12-17T06:00:51.000Z" itemprop="datePublished">2015-12-17</time>
+      <a href="/2015/12/17/Longest-Common-Prefix/" class="article-date">
+  	<time datetime="2015-12-17T07:27:05.000Z" itemprop="datePublished">2015-12-17</time>
 </a>
     </div>
   
@@ -191,7 +191,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Palindrome Number
+      Longest Common Prefix
     </h1>
   
 
@@ -211,15 +211,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>description：Determine whether an integer is a palindrome. Do this without extra space<br><a id="more"></a><br>Palindrome Number 就是一个整数正序和逆序所表示的数是一样的。<br>题目的大概意思就是用一个算法来识别给定的任意整数是不是Palindrome Number</p>
-<h1 id="解题思路：">解题思路：</h1><ol>
-<li><p>看到这题的时候，首先想到的是将数字转换成字符串，然后将字符串reverse，然后再比较两个字符串是否相等。但是题目中说明了不能使用额外空间，所以这种思路不可行（但是LeetCode貌似并没有对空间地址进行检查，用这种思路实现提交通过了，下面是具体的实现代码）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x &lt; <span class="number">0</span>)</span><br><span class="line">        	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(x == <span class="number">0</span>)</span><br><span class="line">        	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">        	String old = x+<span class="string">""</span>;</span><br><span class="line">        	String res = <span class="string">""</span>;</span><br><span class="line">               <span class="comment">//将数字逆序存储为字符串</span></span><br><span class="line">        	<span class="keyword">for</span>(<span class="keyword">int</span> i = old.length() - <span class="number">1</span> ;i &gt;= <span class="number">0</span>;i--)&#123;</span><br><span class="line">        		res += old.charAt(i);</span><br><span class="line">        	&#125;</span><br><span class="line">               <span class="comment">//比较正序和逆序字符串是否相等</span></span><br><span class="line">        	<span class="keyword">if</span>(old.equals(res))</span><br><span class="line">        		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        	<span class="keyword">else</span></span><br><span class="line">        	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果一个整数是Palindrome Number，那么就意味着它是对称的，所以我们可以来比较第一位和最后一位数字，然后比较第二位和倒数第二位，依次类推。以下是具体的代码实现（这种方法的实现要比第一种快一倍多）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	<span class="keyword">if</span> (x &lt; <span class="number">10</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	<span class="keyword">int</span> d = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> digit = x;</span><br><span class="line">       <span class="comment">//计算出整数有多少位</span></span><br><span class="line">		<span class="keyword">while</span>(digit &gt; <span class="number">0</span>)&#123;</span><br><span class="line">		d++;</span><br><span class="line">		digit = digit / <span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="keyword">int</span> left = (<span class="keyword">int</span>) Math.pow(<span class="number">10</span>, d - <span class="number">1</span> );</span><br><span class="line">		<span class="keyword">int</span> right = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(left &gt;= right)&#123;</span><br><span class="line">            <span class="comment">//比较左边和右边的数字</span></span><br><span class="line"> 			<span class="keyword">if</span>( x / left % <span class="number">10</span> != x / right % <span class="number">10</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line"> 			left /= <span class="number">10</span>;</span><br><span class="line"> 			right *= <span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+        <p>Description:Write a function to find the longest common prefix string amongst an array of strings.<br><a id="more"></a><br>此题的要求是要找出字符串的最长公共子前缀。</p>
+<h1 id="解题思路">解题思路</h1><p>这道题的一种解法是：随便选取一个字符串，如果存在最长公共子前缀，一定在此字符串里，然后将此字符串和其余字符串作比较来获得最长公共子前缀。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</span><br><span class="line">      		<span class="keyword">if</span> (strs.length == <span class="number">0</span>)</span><br><span class="line">		  <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">             <span class="comment">//选取一个字符串用以和其它字符串作比较</span></span><br><span class="line">			String prefix = strs[<span class="number">0</span>];</span><br><span class="line">		String res = <span class="string">""</span>;</span><br><span class="line">           <span class="comment">//遍历剩余的字符串，对每一个字符串与选定的作比较</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; strs.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(prefix.length() == <span class="number">0</span> || strs[i].length() == <span class="number">0</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">            <span class="comment">//获得两个带比较字符串的最短长度</span></span><br><span class="line">		<span class="keyword">int</span> len = prefix.length() &gt; strs[i].length() ? strs[i].length() : prefix.length();</span><br><span class="line">		<span class="keyword">int</span> j;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; len; j++) &#123;</span><br><span class="line">			<span class="comment">//记录像个字符串具有最长公共子前缀的下标</span></span><br><span class="line">			<span class="keyword">if</span> (prefix.charAt(j) != strs[i].charAt(j)) &#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;  </span><br><span class="line">		&#125;</span><br><span class="line">           <span class="comment">//获得最长公共子前缀</span></span><br><span class="line">		prefix = prefix.substring(<span class="number">0</span>,j);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> prefix;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -229,18 +222,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/17/Longest-Common-Prefix/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/12/17/Remove-Nth-Node-From-End-of-List/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Longest Common Prefix
+          Remove Nth Node From End of List
         
       </div>
     </a>
   
   
-    <a href="/2015/12/14/SetAbout/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SetAbout</div>
+    <a href="/2015/12/17/Palindrome-Number/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Palindrome Number</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -269,7 +262,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Palindrome-Number" data-title="Palindrome Number" data-url="http://yoursite.com/2015/12/17/Palindrome-Number/"></div>
+	<div class="ds-thread" data-thread-key="Longest-Common-Prefix" data-title="Longest Common Prefix" data-url="http://yoursite.com/2015/12/17/Longest-Common-Prefix/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
