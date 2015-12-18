@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-17T09:58:34.120Z</updated>
+  <updated>2015-12-18T02:06:54.443Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,195 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Implement strStr]]></title>
+    <link href="http://yoursite.com/2015/12/18/Implement-strStr/"/>
+    <id>http://yoursite.com/2015/12/18/Implement-strStr/</id>
+    <published>2015-12-18T01:58:59.000Z</published>
+    <updated>2015-12-18T02:06:54.443Z</updated>
+    <content type="html"><![CDATA[<h1 id="Description">Description</h1><blockquote>
+<p>Implement strStr().</p>
+<p>Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.</p>
+</blockquote>
+<a id="more"></a>
+<p>题目大意是判断字符串是否是另一个字符串的子串，并返回第一次出现的索引。</p>
+<h1 id="解题思路">解题思路</h1><p>一边遍历两个字符串边比较，如果两个对应位置上的字符相等，继续遍历，否则退回到刚开始匹配的下一个位置(避免错过可能的解)，再遍历<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">strStr</span><span class="params">(String haystack, String needle)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i, j;</span><br><span class="line"><span class="keyword">for</span> (i = j = <span class="number">0</span>; i &lt; haystack.length() &amp;&amp; j &lt; needle.length();) &#123;</span><br><span class="line">	<span class="keyword">if</span> (haystack.charAt(i) == needle.charAt(j)) &#123;</span><br><span class="line">		++i;</span><br><span class="line">		++j;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		i -= j - <span class="number">1</span>;</span><br><span class="line">		j = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> j != needle.length() ? -<span class="number">1</span> : i - j;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Description">Description</h1><blockquote>
+<p>Implement strStr().</p>
+<p>Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Remove Element]]></title>
+    <link href="http://yoursite.com/2015/12/18/Remove-Element/"/>
+    <id>http://yoursite.com/2015/12/18/Remove-Element/</id>
+    <published>2015-12-18T01:50:34.000Z</published>
+    <updated>2015-12-18T01:58:07.621Z</updated>
+    <content type="html"><![CDATA[<h1 id="Description">Description</h1><blockquote>
+<p>Given an array and a value, remove all instances of that value in place and return the new length.</p>
+<p>The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</p>
+</blockquote>
+<a id="more"></a>
+<p>题目大意就是给定一个数组和一个值，删除数组中所有与此值相等的元素。</p>
+<h1 id="解题思路">解题思路</h1><p>一种做法是用两个“指针”分别指向数组的第一个和最后一个元素，然后移动第一个指针遍历数组，如果遇到与给定值相等，用最后一个元素将当前元素覆盖来达到删除目的(如果最后一个元素也和给定值相等，则将“指针“前移知道元素不等于给定值，然后覆盖。)<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(nums.length == <span class="number">0</span>)</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> last = nums.length - <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> tmp = <span class="number">0</span>,i = <span class="number">0</span>,count = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>(i &lt;= last)&#123;</span><br><span class="line"> <span class="keyword">if</span>(nums[i] == val)&#123;</span><br><span class="line">	 <span class="keyword">if</span>(nums[last] != val)&#123;</span><br><span class="line">		 </span><br><span class="line">	     tmp = nums[i];</span><br><span class="line">	     nums[i] = nums[last];</span><br><span class="line">	     nums[last] = tmp;</span><br><span class="line">	     i++;</span><br><span class="line">	 &#125;</span><br><span class="line">	 last--;</span><br><span class="line">	 count++;</span><br><span class="line"> &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	 i++;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> nums.length - count;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Description">Description</h1><blockquote>
+<p>Given an array and a value, remove all instances of that value in place and return the new length.</p>
+<p>The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Remove Duplicates from Sorted Array]]></title>
+    <link href="http://yoursite.com/2015/12/18/Remove-Duplicates-from-Sorted-Array/"/>
+    <id>http://yoursite.com/2015/12/18/Remove-Duplicates-from-Sorted-Array/</id>
+    <published>2015-12-18T01:41:56.000Z</published>
+    <updated>2015-12-18T01:50:03.842Z</updated>
+    <content type="html"><![CDATA[<h1 id="Description">Description</h1><blockquote>
+<p>Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.</p>
+<p>Do not allocate extra space for another array, you must do this in place with constant memory.</p>
+<p>For example,<br>Given input array nums = [1,1,2],</p>
+<p>Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn’t matter what you leave beyond the new length.</p>
+</blockquote>
+<a id="more"></a>
+<p>题目大意就是在原数组上删除那些重复的元素，然后返回数组的长度</p>
+<h1 id="解题思路">解题思路</h1><p>记录数组的起始元素，然后遍历之后的数组元素，如果相等，继续遍历，如果遇到不相等的(由于起始元素到当前元素之间的元素都是重复的，所以将当前元素覆盖掉起始元素之后一位的元素，然后将起始元素往后移一位)。然后返回“新”数组的长度<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">    <span class="keyword">int</span> startPosition = <span class="number">0</span>;    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;    </span><br><span class="line">        <span class="keyword">if</span> (nums[i] != nums[startPosition]) &#123;    </span><br><span class="line">            nums[startPosition + <span class="number">1</span>] = nums[i];    </span><br><span class="line">            startPosition++;    </span><br><span class="line">        &#125;    </span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">return</span> startPosition + <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Description">Description</h1><blockquote>
+<p>Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.</p>
+<p>Do not allocate extra space for another array, you must do this in place with constant memory.</p>
+<p>For example,<br>Given input array nums = [1,1,2],</p>
+<p>Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn’t matter what you leave beyond the new length.</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Merge Two Sorted Lists]]></title>
+    <link href="http://yoursite.com/2015/12/18/Merge-Two-Sorted-Lists/"/>
+    <id>http://yoursite.com/2015/12/18/Merge-Two-Sorted-Lists/</id>
+    <published>2015-12-18T01:36:10.000Z</published>
+    <updated>2015-12-18T01:41:16.859Z</updated>
+    <content type="html"><![CDATA[<h1 id="Description">Description</h1><blockquote>
+<p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>
+</blockquote>
+<a id="more"></a>
+<p>题目大意就是将两个已排序的链表合并成一个链表。</p>
+<h1 id="解题思路">解题思路</h1><p>一种做法是依次比较两个链表的元素，将较小的元素拿出来放到建立的另一条链表上。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * public class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode(int x) &#123; val = x; &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">mergeTwoLists</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">     <span class="keyword">if</span>(l1 == <span class="keyword">null</span> &amp;&amp; l2 == <span class="keyword">null</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(l1 == <span class="keyword">null</span> &amp;&amp; l2 != <span class="keyword">null</span>)</span><br><span class="line">			<span class="keyword">return</span> l2;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(l1 != <span class="keyword">null</span> &amp;&amp; l2 == <span class="keyword">null</span>)</span><br><span class="line">			<span class="keyword">return</span> l1;</span><br><span class="line">		ListNode p = <span class="keyword">null</span>, head = <span class="keyword">null</span>;</span><br><span class="line">		ListNode curr = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">while</span> (l1 != <span class="keyword">null</span> &amp;&amp; l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (l1.val &lt; l2.val) &#123;</span><br><span class="line">				curr = <span class="keyword">new</span> ListNode(l1.val);</span><br><span class="line">				<span class="keyword">if</span> (head == <span class="keyword">null</span>) &#123;</span><br><span class="line">					head = curr;</span><br><span class="line">					p = head;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					p.next = curr;</span><br><span class="line">					p = p.next;</span><br><span class="line">				&#125;</span><br><span class="line">				l1 = l1.next;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				curr = <span class="keyword">new</span> ListNode(l2.val);</span><br><span class="line">				<span class="keyword">if</span> (head == <span class="keyword">null</span>) &#123;</span><br><span class="line">					head = curr;</span><br><span class="line">					p = head;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					p.next = curr;</span><br><span class="line">					p = p.next;</span><br><span class="line">				&#125;</span><br><span class="line">				l2 = l2.next;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(l1 == <span class="keyword">null</span>)&#123;</span><br><span class="line">			p.next = l2;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			p.next = l1;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Description">Description</h1><blockquote>
+<p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Valid Parentheses]]></title>
+    <link href="http://yoursite.com/2015/12/18/Valid-Parentheses/"/>
+    <id>http://yoursite.com/2015/12/18/Valid-Parentheses/</id>
+    <published>2015-12-18T01:29:58.000Z</published>
+    <updated>2015-12-18T01:35:19.279Z</updated>
+    <content type="html"><![CDATA[<h1 id="Desription">Desription</h1><blockquote>
+<p>Given a string containing just the characters ‘(‘, ‘)’, ‘{‘, ‘}’, ‘[‘ and ‘]’, determine if the input string is valid.</p>
+<p>The brackets must close in the correct order, “()” and “()[]{}” are all valid but “(]” and “([)]” are not.</p>
+<p>Subscribe to see which companies asked this question</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="解题思路">解题思路</h1><p>用栈来做这道题就很容易了，将字符入栈时和栈顶元素比较，如果配对就弹出栈顶元素，否则入栈。当最后栈为空时说明完全匹配，是合法的。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">            Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack&lt;Character&gt;();</span><br><span class="line">         <span class="keyword">int</span> len = s.length();</span><br><span class="line">	         <span class="keyword">char</span> in;</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; len;i++)&#123;</span><br><span class="line">        	 in = s.charAt(i);</span><br><span class="line">        	 <span class="keyword">switch</span> (in) &#123;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'('</span>:</span><br><span class="line">				<span class="keyword">if</span>(!stack.isEmpty() &amp;&amp; <span class="string">')'</span> == stack.peek())&#123;</span><br><span class="line">					stack.pop();</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					stack.push(in);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">')'</span>:</span><br><span class="line">				<span class="keyword">if</span>(!stack.isEmpty() &amp;&amp; <span class="string">'('</span> == stack.peek())&#123;</span><br><span class="line">					stack.pop();</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					stack.push(in);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'['</span>:</span><br><span class="line">				<span class="keyword">if</span>(!stack.isEmpty() &amp;&amp; <span class="string">']'</span> == stack.peek())&#123;</span><br><span class="line">					stack.pop();</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					stack.push(in);</span><br><span class="line">				&#125;	</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">']'</span>:</span><br><span class="line">				<span class="keyword">if</span>(!stack.isEmpty() &amp;&amp; <span class="string">'['</span> == stack.peek())&#123;</span><br><span class="line">					stack.pop();</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					stack.push(in);</span><br><span class="line">				&#125;		</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'&#123;'</span>:</span><br><span class="line">				<span class="keyword">if</span>(!stack.isEmpty() &amp;&amp; <span class="string">'&#125;'</span> == stack.peek())&#123;</span><br><span class="line">					stack.pop();</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					stack.push(in);</span><br><span class="line">				&#125;		</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'&#125;'</span>:</span><br><span class="line">				<span class="keyword">if</span>(!stack.isEmpty() &amp;&amp; <span class="string">'&#123;'</span> == stack.peek())&#123;</span><br><span class="line">					stack.pop();</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					stack.push(in);</span><br><span class="line">				&#125;				</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">default</span>:</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">if</span>(stack.isEmpty())</span><br><span class="line">        	 <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">         <span class="keyword">else</span></span><br><span class="line">             <span class="keyword">return</span> <span class="keyword">false</span>; </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Desription">Desription</h1><blockquote>
+<p>Given a string containing just the characters ‘(‘, ‘)’, ‘{‘, ‘}’, ‘[‘ and ‘]’, determine if the input string is valid.</p>
+<p>The brackets must close in the correct order, “()” and “()[]{}” are all valid but “(]” and “([)]” are not.</p>
+<p>Subscribe to see which companies asked this question</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Implement Stack using Queues]]></title>
+    <link href="http://yoursite.com/2015/12/18/Implement-Stack-using-Queues/"/>
+    <id>http://yoursite.com/2015/12/18/Implement-Stack-using-Queues/</id>
+    <published>2015-12-18T01:20:16.000Z</published>
+    <updated>2015-12-18T01:28:43.579Z</updated>
+    <content type="html"><![CDATA[<h1 id="Description">Description</h1><p>Implement the following operations of a stack using queues.</p>
+<p>push(x) – Push element x onto stack.<br>pop() – Removes the element on top of the stack.<br>top() – Get the top element.<br>empty() – Return whether the stack is empty.</p>
+<p>此题的要求就是用队列来实现栈</p>
+<h1 id="解题思路">解题思路</h1><p>用一个队列的话很难实现，用两个队列就很容易实现了。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStack</span> </span>&#123;</span><br><span class="line">	<span class="comment">//创建两个队列</span></span><br><span class="line">    Queue&lt;Integer&gt; q = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">	Queue&lt;Integer&gt; p = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="comment">// Push element x onto stack.</span></span><br><span class="line">    <span class="comment">//往队列中添加元素，如果都为空，则随便选取一个添加，如果一个为空另一个不为空，则往不为空的队列中添加</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(q.isEmpty() &amp;&amp; p.isEmpty() || !q.isEmpty() &amp;&amp; p.isEmpty())&#123;</span><br><span class="line">        	q.add(x);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        	p.add(x);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Removes the element on top of the stack.</span></span><br><span class="line">    <span class="comment">//将不为空的队列中的元素移出到另一个为空的队列除最后一个元素，然后将最后一个元素删除</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> len = q.isEmpty() ? p.size() : q.size();</span><br><span class="line">        <span class="keyword">if</span>(!q.isEmpty())&#123;</span><br><span class="line">        	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; len - <span class="number">1</span>;i++)&#123;</span><br><span class="line">        		p.add(q.remove());</span><br><span class="line">        	&#125;</span><br><span class="line">        	q.remove();</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; len - <span class="number">1</span>;i++)&#123;</span><br><span class="line">        		q.add(p.remove());</span><br><span class="line">        	&#125;</span><br><span class="line">        	p.remove();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Get the top element.</span></span><br><span class="line">    <span class="comment">//将不为空的队列中的元素移出到另一个为空的队列除最后一个元素，然后获取最后一个元素的值并移到另一个队列</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> len = q.isEmpty() ? p.size() : q.size();</span><br><span class="line">    	<span class="keyword">int</span> res ;</span><br><span class="line">        <span class="keyword">if</span>(!q.isEmpty())&#123;</span><br><span class="line">        	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; len - <span class="number">1</span>;i++)&#123;</span><br><span class="line">        		p.add(q.remove());</span><br><span class="line">        	&#125;</span><br><span class="line">        	res = q.peek();</span><br><span class="line">        	p.add(q.remove());</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; len - <span class="number">1</span>;i++)&#123;</span><br><span class="line">        		q.add(p.remove());</span><br><span class="line">        	&#125;</span><br><span class="line">        	res = p.peek();</span><br><span class="line">        	q.add(p.remove());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Return whether the stack is empty.</span></span><br><span class="line">    <span class="comment">//两个队列都为空时说明栈为空</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">empty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> q.isEmpty() &amp;&amp; p.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Description">Description</h1><p>Implement the following operations of a stack using queues.</p>
+<p>push(x) – Push element x onto sta]]>
+    </summary>
+    
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Contains Duplicate II]]></title>
+    <link href="http://yoursite.com/2015/12/18/Contains-Duplicate-II/"/>
+    <id>http://yoursite.com/2015/12/18/Contains-Duplicate-II/</id>
+    <published>2015-12-18T01:03:37.000Z</published>
+    <updated>2015-12-18T01:19:14.156Z</updated>
+    <content type="html"><![CDATA[<h1 id="Description">Description</h1><p>Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.<br><a id="more"></a><br>题目大意是判断给定一个数组和整数K，是否存在两个不相等的下标i和j，使得nums[i]=nums[j],并且i-j&lt;=k</p>
+<h1 id="解题思路">解题思路</h1><p>一种解法是利用HashSet,从头开始遍历数组，检测数组元素是否在HashSet中，如果不在，将元素添加到HashSet中，记录添加到中的元素的下标，否则返回false，当添加元素的下标和起始下标之差大于K是，将起始坐标对应的元素从集合中删除，然后起始坐标加1.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">	<span class="keyword">int</span> start = <span class="number">0</span>, end = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (!set.contains(nums[i])) &#123;</span><br><span class="line">			set.add(nums[i]);</span><br><span class="line">			end++;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">if</span>(end -start &gt; k)&#123;</span><br><span class="line">			set.remove(nums[start]);</span><br><span class="line">			start++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Description">Description</h1><p>Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.<br>]]>
+    
+    </summary>
+    
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Contains Duplicate]]></title>
+    <link href="http://yoursite.com/2015/12/18/Contains-Duplicate/"/>
+    <id>http://yoursite.com/2015/12/18/Contains-Duplicate/</id>
+    <published>2015-12-18T00:57:10.000Z</published>
+    <updated>2015-12-18T01:03:10.414Z</updated>
+    <content type="html"><![CDATA[<h1 id="Description">Description</h1><p>Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.<br><a id="more"></a><br>题目大意就是判断一个整数数组中是否有重复的元素。</p>
+<h1 id="解题思路">解题思路</h1><p>这道题比较容易想到的是使用HashSet来判断是否有重复元素（将所有元素放入到HashSet,如果HashSet的大小和数组的大小一样，说明没有重复元素）<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(nums.length == <span class="number">0</span>)</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"> Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line"> <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i &lt; nums.length;i++)</span><br><span class="line">	 set.add(nums[i]);</span><br><span class="line"><span class="keyword">if</span>(set.size() == nums.length)</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Description">Description</h1><p>Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.<br>]]>
+    
+    </summary>
+    
+      <category term="LeetCode Easy" scheme="http://yoursite.com/tags/LeetCode-Easy/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Remove Nth Node From End of List]]></title>

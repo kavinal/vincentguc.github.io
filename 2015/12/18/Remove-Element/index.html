@@ -3,36 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>flume的安装部署 | Vincent Guc</title>
+  <title>Remove Element | Vincent Guc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="准备
-flume1.6的安装包 下载
-解压1$ tar -zxvf apache-flume-1.6.0-bin.tar.gz -C ~/Devtool/flume
-
-
-配置
-进入解压后flume的目录1$ cd ~/Devtool/flume">
+  <meta name="description" content="Description
+Given an array and a value, remove all instances of that value in place and return the new length.
+The order of elements can be changed. It doesn’t matter what you leave beyond the new len">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flume的安装部署">
-<meta property="og:url" content="http://yoursite.com/2015/10/24/flume-about/index.html">
+<meta property="og:title" content="Remove Element">
+<meta property="og:url" content="http://yoursite.com/2015/12/18/Remove-Element/index.html">
 <meta property="og:site_name" content="Vincent Guc">
-<meta property="og:description" content="准备
-flume1.6的安装包 下载
-解压1$ tar -zxvf apache-flume-1.6.0-bin.tar.gz -C ~/Devtool/flume
-
-
-配置
-进入解压后flume的目录1$ cd ~/Devtool/flume">
-<meta property="og:updated_time" content="2015-10-28T10:58:48.105Z">
+<meta property="og:description" content="Description
+Given an array and a value, remove all instances of that value in place and return the new length.
+The order of elements can be changed. It doesn’t matter what you leave beyond the new len">
+<meta property="og:updated_time" content="2015-12-18T01:58:07.621Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flume的安装部署">
-<meta name="twitter:description" content="准备
-flume1.6的安装包 下载
-解压1$ tar -zxvf apache-flume-1.6.0-bin.tar.gz -C ~/Devtool/flume
-
-
-配置
-进入解压后flume的目录1$ cd ~/Devtool/flume">
+<meta name="twitter:title" content="Remove Element">
+<meta name="twitter:description" content="Description
+Given an array and a value, remove all instances of that value in place and return the new length.
+The order of elements can be changed. It doesn’t matter what you leave beyond the new len">
   
     <link rel="alternative" href="/atom.xml" title="Vincent Guc" type="application/atom+xml">
   
@@ -192,11 +180,11 @@ flume1.6的安装包 下载
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-flume-about" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Remove-Element" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/10/24/flume-about/" class="article-date">
-  	<time datetime="2015-10-24T12:03:44.000Z" itemprop="datePublished">2015-10-24</time>
+      <a href="/2015/12/18/Remove-Element/" class="article-date">
+  	<time datetime="2015-12-18T01:50:34.000Z" itemprop="datePublished">2015-12-18</time>
 </a>
     </div>
   
@@ -209,7 +197,7 @@ flume1.6的安装包 下载
         
   
     <h1 class="article-title" itemprop="name">
-      flume的安装部署
+      Remove Element
     </h1>
   
 
@@ -218,7 +206,7 @@ flume1.6的安装包 下载
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flume/">flume</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode-Easy/">LeetCode Easy</a></li></ul>
 	</div>
 
         
@@ -229,30 +217,13 @@ flume1.6的安装包 下载
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="准备">准备</h2><ol>
-<li>flume1.6的安装包 <a href="http://www.apache.org/dyn/closer.lua/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz" target="_blank" rel="external">下载</a></li>
-<li>解压<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf apache-flume-<span class="number">1.6</span>.<span class="number">0</span>-bin.tar.gz -C ~/Devtool/flume</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="配置">配置</h2><ol>
-<li>进入解压后flume的目录<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/Devtool/flume</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<a id="more"></a>
-<ol>
-<li><p>在conf目录下建立以<strong>.conf</strong>结尾的文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch conf/examples.conf</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编辑<em>examples.conf</em>文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi conf/examples.conf</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>添加如下内容：</p>
-<blockquote>
-<p>#配置source的名字<br>HdfsAgent.sources = s1<br>#配置sink的名字<br>HdfsAgent.sinks = k1<br>#配置channel的名字<br>HdfsAgent.channels = c1<br>#配置与source相关的属性<br>#配置source类型为监听目录<br>HdfsAgent.sources.s1.type = spooldir<br>#配置监听的目录<br>HdfsAgent.sources.s1.spoolDir = /home/test<br>HdfsAgent.sources.s1.fileHeader = true<br>HdfsAgent.sources.s1.deletePolicy = immediate<br>HdfsAgent.sources.s1.fileHeader = true<br>#配置sink的相关属性(将数据写入到hdfs)<br>HdfsAgent.sinks.k1.type = hdfs<br>#hdfs的地址<br>HdfsAgent.sinks.k1.hdfs.path = hdfs://124.16.136.144:8020/user/hive/warehouse/user4/%Y%m%d/%H<br>#写入到hdfs上的文件的前缀<br>HdfsAgent.sinks.k1.hdfs.filePrefix = %{file}<br>HdfsAgent.sinks.k1.hdfs.fileType = DataStream<br>HdfsAgent.sinks.k1.hdfs.rollInterval = 10<br>HdfsAgent.sinks.k1.hdfs.rollCount = 0<br>HdfsAgent.sinks.k1.hdfs.rollSize = 0<br>#HdfsAgent.sinks.k1.hdfs.maxOpenFiles = 1<br>HdfsAgent.sinks.k1.hdfs.writeFormat = Text<br>HdfsAgent.sinks.k1.hdfs.batchSize = 10<br>HdfsAgent.sinks.k1.hdfs.inUsePrefix = .<br>#配置channel的相关属性<br>HdfsAgent.channels.c1.type = memory<br>HdfsAgent.channels.c1.capacity = 500000<br>HdfsAgent.channels.c1.transactionCapacity = 100000<br>HdfsAgent.channels.c1.byteCapacity = 1000000000<br>#配置source的channel<br>HdfsAgent.sources.s1.channels = c1<br>#配置sink的channel<br>HdfsAgent.sinks.k1.channel = c1</p>
+        <h1 id="Description">Description</h1><blockquote>
+<p>Given an array and a value, remove all instances of that value in place and return the new length.</p>
+<p>The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</p>
 </blockquote>
-<p><a href="http://flume.apache.org/FlumeUserGuide.html" target="_blank" rel="external">更多配置信息</a></p>
-<h2 id="启动">启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bin/flume-ng agent -n HdfsAgent -c conf <span class="operator">-f</span> conf/examples.conf -Dflume.root.logger=INFO,console</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>题目大意就是给定一个数组和一个值，删除数组中所有与此值相等的元素。</p>
+<h1 id="解题思路">解题思路</h1><p>一种做法是用两个“指针”分别指向数组的第一个和最后一个元素，然后移动第一个指针遍历数组，如果遇到与给定值相等，用最后一个元素将当前元素覆盖来达到删除目的(如果最后一个元素也和给定值相等，则将“指针“前移知道元素不等于给定值，然后覆盖。)<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(nums.length == <span class="number">0</span>)</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> last = nums.length - <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> tmp = <span class="number">0</span>,i = <span class="number">0</span>,count = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>(i &lt;= last)&#123;</span><br><span class="line"> <span class="keyword">if</span>(nums[i] == val)&#123;</span><br><span class="line">	 <span class="keyword">if</span>(nums[last] != val)&#123;</span><br><span class="line">		 </span><br><span class="line">	     tmp = nums[i];</span><br><span class="line">	     nums[i] = nums[last];</span><br><span class="line">	     nums[last] = tmp;</span><br><span class="line">	     i++;</span><br><span class="line">	 &#125;</span><br><span class="line">	 last--;</span><br><span class="line">	 count++;</span><br><span class="line"> &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	 i++;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> nums.length - count;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -262,15 +233,20 @@ flume1.6的安装包 下载
     
 <nav id="article-nav">
   
-    <a href="/2015/10/26/machine-learning/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/12/18/Implement-strStr/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          k- 近邻算法
+          Implement strStr
         
       </div>
     </a>
   
+  
+    <a href="/2015/12/18/Remove-Duplicates-from-Sorted-Array/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Remove Duplicates from Sorted Array</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -297,7 +273,7 @@ flume1.6的安装包 下载
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="flume-about" data-title="flume的安装部署" data-url="http://yoursite.com/2015/10/24/flume-about/"></div>
+	<div class="ds-thread" data-thread-key="Remove-Element" data-title="Remove Element" data-url="http://yoursite.com/2015/12/18/Remove-Element/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

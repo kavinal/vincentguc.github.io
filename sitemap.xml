@@ -2,6 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2015/12/18/Implement-strStr/</loc>
+    <lastmod>2015-12-18T02:06:54.443Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/12/18/Remove-Element/</loc>
+    <lastmod>2015-12-18T01:58:07.621Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/12/18/Remove-Duplicates-from-Sorted-Array/</loc>
+    <lastmod>2015-12-18T01:50:03.842Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/12/18/Merge-Two-Sorted-Lists/</loc>
+    <lastmod>2015-12-18T01:41:16.859Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/12/18/Valid-Parentheses/</loc>
+    <lastmod>2015-12-18T01:35:19.279Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/12/18/Implement-Stack-using-Queues/</loc>
+    <lastmod>2015-12-18T01:28:43.579Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/12/18/Contains-Duplicate-II/</loc>
+    <lastmod>2015-12-18T01:19:14.156Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/12/18/Contains-Duplicate/</loc>
+    <lastmod>2015-12-18T01:03:10.414Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2015/12/17/Palindrome-Number/</loc>
     <lastmod>2015-12-17T10:09:22.516Z</lastmod>
   </url>
